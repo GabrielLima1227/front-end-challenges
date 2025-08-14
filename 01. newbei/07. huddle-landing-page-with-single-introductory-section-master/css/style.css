@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--violet);
+    background-image: url('../images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 3.5rem;
+}
+
+main {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+.hero-image img {
+    max-width: 100%;
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text button {
+    background-color: white;
+    color: var(--violet);
+    border: none;
+    border-radius: 50px;
+    padding: 0.8rem 5rem;
+    font-size: 0.9rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hero-text button:hover {
+    background-color: var(--soft-magenta);
+    color: white;
+}
+
+footer {
+    margin-top: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--soft-magenta);
+    border-color: var(--soft-magenta);
+}
+
+@media (min-width: 768px) {
+    body {
+        background-image: url('../images/bg-desktop.svg');
+        background-size: cover;
+        padding: 4rem;
+    }
+
+    .logo {
+        width: 200px;
+        margin-bottom: 5rem;
+    }
+
+    main {
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .hero-image {
+        flex: 1.2; 
+    }
+
+    .hero-text {
+        flex: 1;
+        text-align: left;
+        max-width: 520px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .hero-text p {
+        font-size: 1.125rem;
+    }
+
+    .hero-text button {
+        padding: 1rem 4rem;
+        font-size: 1.125rem;
+    }
+
+    footer {
+        align-self: flex-end;
+    }
+
+    .social-links {
+        justify-content: flex-end;
+        gap: 1.5rem;
+    }
+
+    .social-links a {
+        width: 40px;
+        height: 40px;
+    }
+}
