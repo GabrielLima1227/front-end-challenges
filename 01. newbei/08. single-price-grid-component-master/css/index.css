@@ -113,7 +113,9 @@ section{
     margin-bottom: 1rem;
 }
 
-#why-us > p{
+#why-us > ul{
+    padding: 0px;
+    list-style: none;
     color: var(--white-smoke);
 }
 
