@@ -20,7 +20,8 @@ body{
     font-family: 'Outfit', Arial, Helvetica, sans-serif;
 }
 main{
-    width: 400px;
+    margin: 1rem;
+    max-width: 368px;
     padding: 20px;
     border-radius: 24px;
     background-color: var(--White);
