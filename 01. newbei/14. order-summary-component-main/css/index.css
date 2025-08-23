@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+:root{
+    /*Primary*/
+    --Blue-100: hsl(225, 100%, 94%);
+    --Blue-700: hsl(245, 75%, 52%);
+
+    /*Neutral*/
+    --Blue-50: hsl(225, 100%, 98%);
+    --Gray-600: hsl(224, 23%, 55%);
+    --Blue-950: hsl(223, 47%, 23%);
+
+    /*Font*/
+    --Red-Hat-Display: "Red Hat Display", Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    min-height: 100dvh;
+    font: normal 1rem var(--Red-Hat-Display);
+    background: var(--Blue-100) url(../images/pattern-background-mobile.svg) no-repeat top center/cover fixed;
+    transition: all 0.5s ease-in-out;
+}
+
+main{
+    margin: 1rem;
+    overflow: hidden;
+    max-width: 368px;
+    text-align: center;
+    border-radius: 16px;
+    background-color: var(--Blue-50);
+}
+
+section{
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+
+    padding: 2rem;
+}
+
+h1{
+    color: var(--Blue-950);
+    font: bolder 2rem var(--Red-Hat-Display);
+}
+
+p{
+    color: var(--Gray-600);
+    font: bold 1rem/1.5 var(--Red-Hat-Display);
+}
+
+#plan{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    padding: 0.8rem;
+    border-radius: 8px;
+    background-color: var(--Blue-100);
+}
+
+#price{
+    display: flex;
+    flex-flow: column;
+}
+
+#price > p{
+    color: black;
+}
+
+#price > span{
+    color: var(--Gray-600);
+}
+
+#plan > a{
+    margin: auto;
+}
+
+#payment{
+    border: none;
+    padding: 0.8rem;
+    cursor: pointer;
+    border-radius: 8px;
+    color: var(--Blue-100);
+    background-color: var(--Blue-700);
+    font: bold 1rem var(--Red-Hat-Display);
+    box-shadow: 0px 5px 12px var(--Blue-700);
+    transition: all 0.5s ease-in-out;
+}
+
+#payment:hover{
+    background-color: var(--Blue-950);
+    transform: scale(1.1) translateY(-0.2rem);
+}
+
+#cancel-order{
+    border:none;
+    cursor: pointer;
+    color: var(--Gray-600);
+    background-color: var(--Blue-50);
+    font: bold 1rem var(--Red-Hat-Display);
+    transition: all 0.5s ease-in-out;
+}
+
+#cancel-order:hover{
+    transform: scale(1.1);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 768px) {
+    body{
+        background: var(--Blue-100) url(../images/pattern-background-desktop.svg) no-repeat top center fixed;
+    }
+}
